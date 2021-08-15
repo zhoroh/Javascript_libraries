@@ -1,0 +1,40 @@
+<html lang="en"><head>
+ <style>
+ h1 {text-align : center;}
+ </style>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta http-equiv="X-UA-Compatible" content="ie=edge">
+ 
+ <script src="https://cdn.jsdelivr.net/npm/chart.js@3.5.0/dist/chart.min.js"></script>
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+ 
+ <title>My Chart.js Chart</title>
+</head>
+<body>
+ <h1>Largest Cities in Massachusetts</h1>
+ <div class="container">
+  <canvas id="myChart" width="122" height="61" style="display: block; box-sizing: border-box; height: 61px; width: 122px;"></canvas>
+ </div>
+ 
+ <script>
+ 
+  let mychart = document.getElementById('myChart').getContext('2d');
+  
+  let massPopChart = new Chart(myChart,{
+  type : 'bar', //bar,horizontal bar,pie,line,radar
+  data : {labels : ['Boston','Worcester','Springfield','Lowell','Cambridge','New Bedford'],
+  datasets : [{label :'Population' ,data : [617594,181045,153060,106519,105162,95072],backgroundColor :['blue','red','yellow','orange','black','grey'],
+  borderWidth:1,
+  borderColor : '#777',
+  hoverBorderWidth : 3,
+  hoverBorderColor:'#000'}]},
+  options : {
+  }
+  });
+  
+ </script>
+
+
+
+</body></html>
